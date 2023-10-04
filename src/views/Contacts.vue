@@ -1,10 +1,9 @@
 <template>
-  <router-view />
+  <NavBar />
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
-
+import NavBar from "../components/NavBar.vue";
 export default {
   data() {
     return {};
@@ -15,3 +14,5 @@ export default {
   },
 };
 </script>
+
+<style></style>

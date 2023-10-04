@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --semi-black: #222;
+  --green: #5f825c;
+}
+
+body {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  letter-spacing: -0.9px;
+}
+
+header,
+.home__header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.home__header,
+.header__link {
+  color: var(--black);
+  padding: 0 6rem;
+}
+
+.header__logo {
+  filter: invert(45%) sepia(32%) saturate(355%) hue-rotate(68deg)
+    brightness(97%) contrast(94%);
+}
+
+.router__link {
+  text-decoration: none;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.router__link:hover {
+  color: var(--green);
+}
+
+.cart {
+  filter: invert(1);
+  width: 20px;
+}
+
+.cart__header {
+  width: 20px;
+  filter: none;
+}
+
+.cart__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  top: 0;
+  max-width: 100%;
+
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://assets.website-files.com/64ed01cfd959df99c0368448/64ef5ddb5b42f90e9de0bd46_severin-candrian-0pJCjF_fpbM-unsplash%201%20(2)%20(1).webp")
+    no-repeat center;
+  background-size: cover;
+  padding: 0 6rem 5rem 6rem;
+}
+
+.main__hero {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__left {
+  color: var(--white);
+  margin-top: 3rem;
+}
+
+.hero__left h1 {
+  font-size: 90px;
+  max-width: 450px;
+  line-height: 80px;
+  font-weight: 500;
+  letter-spacing: -2.7px;
+}
+
+.hero__left p {
+  margin: 2rem 0 3rem 0;
+  max-width: 460px;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+}
+
+.span__color__black {
+  color: var(--semi-black);
+}
+
+.span__color__green {
+  color: var(--green);
+}
+
+.button__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discover__button {
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 1rem 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.discover__button:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.scroll__more {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.scroll__more:hover {
+  filter: invert(45%) sepia(32%) saturate(355%) hue-rotate(68deg)
+    brightness(97%) contrast(94%);
+}
+
+.scroll__more img {
+  width: 15px;
+  filter: invert(1);
+}
+
+/* COMPANY */
+
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.company__section {
+  padding: 9rem 6rem;
+}
+
+.company__section h3 {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.company__section h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  line-height: 55px;
+}
+
+.company__section p {
+  margin: 4rem 0;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+/* SHOP */
+
+.shop__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 4rem;
+  align-items: end;
+}
+
+.shop__header h2 {
+  font-size: 3.5rem;
+  line-height: 60px;
+  max-width: 800px;
+  font-weight: 500;
+  letter-spacing: -0.2rem;
+}
+
+.shop__header .router__link {
+  border-bottom: 1px solid var(--black);
+  padding: 0 0 0.8rem 0;
+  display: block;
+}
