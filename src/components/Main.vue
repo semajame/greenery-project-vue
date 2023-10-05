@@ -51,12 +51,14 @@
   <Company />
   <Shop />
   <Quality />
+  <Footer />
 </template>
 
 <script>
 import Company from "./Company.vue";
 import Shop from "./Shop.vue";
 import Quality from "./Quality.vue";
+import Footer from "./Footer.vue";
 
 export default {
   data() {
@@ -76,6 +78,7 @@ export default {
     Company,
     Shop,
     Quality,
+    Footer,
   },
 };
 </script>

@@ -272,7 +272,7 @@ section {
 /* QUALITY */
 
 .quality__section {
-  padding-top: 3rem;
+  padding: 3rem 0 5rem 0;
 }
 
 .quality__container {
@@ -326,4 +326,34 @@ hr {
 
 .learn__more:hover {
   background-color: var(--green);
+}
+
+/* FOOTER */
+
+.footer__section {
+  padding: 5rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--semi-black);
+}
+
+.footer__section p {
+  color: var(--white);
+  font-size: 1.1rem;
+  max-width: 450px;
+}
+
+.socials__container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.socials__container a {
+  color: var(--white);
+}
+
+.socials__container a:hover {
+  color: var(--green);
 }
