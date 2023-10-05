@@ -54,31 +54,26 @@ export default {
   data() {
     return {
       exploreHeader: "Explore our green world",
+      isActive: false,
 
       buttons: [
         {
           category: "All",
-          isActive: false,
         },
         {
           category: "Flowering Plants",
-          isActive: false,
         },
         {
           category: "Succulents",
-          isActive: false,
         },
         {
           category: "Air Purifiers",
-          isActive: false,
         },
         {
           category: "Low-Maintenance",
-          isActive: false,
         },
         {
           category: "Indoor Foliage",
-          isActive: false,
         },
       ],
 
