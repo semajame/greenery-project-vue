@@ -41,7 +41,12 @@
       </div>
 
       <div class="button__container">
-        <button class="discover__button">{{ discoverButton }}</button>
+        <router-link
+          :to="{ name: 'explore' }"
+          class="router__link discover__button"
+          >{{ discoverButton }}</router-link
+        >
+
         <button class="scroll__more">
           {{ scrollButton }} <img :src="arrowDown" alt="Arrow Down" />
         </button>
