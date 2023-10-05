@@ -5,7 +5,7 @@
     <h1>{{ exploreHeader }}</h1>
   </main>
 
-  <div class="explore__button__container">
+  <section class="explore__button__container">
     <button
       v-for="(button, index) in buttons"
       :key="index"
@@ -14,9 +14,9 @@
     >
       {{ button.category }}
     </button>
-  </div>
+  </section>
 
-  <div class="explore__plants__container">
+  <section class="explore__plants__container">
     <div class="shop__container">
       <div class="product__container" v-for="items in plants" :key="items.id">
         <div class="product__image">
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
