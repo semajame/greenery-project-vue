@@ -1,20 +1,14 @@
 <template>
   <header class="home__header">
     <div class="left__header">
-      <router-link to="/" class="router__link span__color__black">
-        Home
+      <router-link
+        :to="links.path"
+        class="router__link span__color__black"
+        v-for="links in navContent"
+        :key="links.path"
+      >
+        {{ links.component }}
       </router-link>
-
-      <router-link
-        :to="{ name: 'explore' }"
-        class="router__link span__color__black"
-        >Explore</router-link
-      >
-      <router-link
-        :to="{ name: 'blog' }"
-        class="router__link span__color__black"
-        >Blog</router-link
-      >
     </div>
     <div class="logo__header header__logo">
       <router-link
@@ -47,7 +41,20 @@ export default {
 
       navContent: [
         {
-          name: "",
+          path: "/",
+          name: "home",
+          component: "Home",
+        },
+
+        {
+          path: "/explore",
+          name: "explore",
+          component: "Explore",
+        },
+        {
+          path: "/blog",
+          name: "blog",
+          component: "Blog",
         },
       ],
     };

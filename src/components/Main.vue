@@ -2,14 +2,14 @@
   <div class="hero">
     <header>
       <div class="left__header">
-        <router-link to="/" class="router__link"> Home </router-link>
-
-        <router-link :to="{ name: 'explore' }" class="router__link"
-          >Explore</router-link
+        <router-link
+          :to="links.path"
+          class="router__link"
+          v-for="links in navContent"
+          :key="links.path"
         >
-        <router-link :to="{ name: 'blog' }" class="router__link"
-          >Blog</router-link
-        >
+          {{ links.component }}
+        </router-link>
       </div>
       <div class="logo__header">
         <router-link :to="{ name: 'home' }" class="router__link"
@@ -71,6 +71,25 @@ export default {
       spanBlack: "plants",
       discoverButton: "Discover our plants",
       scrollButton: "Scroll for more",
+
+      navContent: [
+        {
+          path: "/",
+          name: "home",
+          component: "Home",
+        },
+
+        {
+          path: "/explore",
+          name: "explore",
+          component: "Explore",
+        },
+        {
+          path: "/blog",
+          name: "blog",
+          component: "Blog",
+        },
+      ],
     };
   },
 
