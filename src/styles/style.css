@@ -5,6 +5,8 @@
   --black: #000;
   --semi-black: #222;
   --green: #5f825c;
+  --gray: #787878;
+  --light-gray: #a9a9a9;
 }
 
 body {
@@ -69,6 +71,7 @@ header,
 .hero {
   position: relative;
   top: 0;
+  grid-template-columns: repeat((autofit, minmax(300px, 1fr)));
   max-width: 100%;
 
   min-height: 100vh;
@@ -160,6 +163,8 @@ header,
 section {
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .company__section {
@@ -189,7 +194,7 @@ section {
 .shop__header {
   display: flex;
   justify-content: space-between;
-  padding: 5rem 4rem;
+  padding: 5rem 0;
   align-items: end;
 }
 
@@ -205,4 +210,120 @@ section {
   border-bottom: 1px solid var(--black);
   padding: 0 0 0.8rem 0;
   display: block;
+}
+
+.shop__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+}
+
+.product__container {
+  width: 350px;
+}
+
+.product__image {
+  width: 100%;
+}
+
+.image-cover {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  height: 437px;
+}
+
+.product__footer {
+  margin: 1rem 0;
+}
+
+.product__name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+}
+
+.product__price {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.product__footer__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow__image {
+  cursor: pointer;
+}
+
+.arrow__image:hover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg);
+  transform-style: preserve-3d;
+}
+
+.product__arrow__button {
+  background-color: transparent;
+  border: none;
+}
+
+/* QUALITY */
+
+.quality__section {
+  padding-top: 3rem;
+}
+
+.quality__container {
+  padding: 5rem 0 0 15rem;
+}
+
+.quality__header__container {
+  display: flex;
+  align-items: center;
+}
+
+.quality__number,
+.quality__header {
+  color: var(--light-gray);
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+}
+
+.quality__header {
+  color: var(--black);
+  margin-left: 1rem;
+}
+
+.quality__paragraph {
+  max-width: 800px;
+  line-height: 25px;
+  color: var(--gray);
+  font-size: 1.2rem;
+}
+
+hr {
+  margin-top: 3rem;
+  height: 1px;
+  background-color: var(--light-gray);
+  border: none;
+}
+
+.learn__container {
+  margin: 4rem 0 0 15rem;
+}
+
+.learn__more {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  background-color: #222;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.learn__more:hover {
+  background-color: var(--green);
 }

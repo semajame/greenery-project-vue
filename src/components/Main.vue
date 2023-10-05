@@ -50,11 +50,13 @@
   </div>
   <Company />
   <Shop />
+  <Quality />
 </template>
 
 <script>
 import Company from "./Company.vue";
 import Shop from "./Shop.vue";
+import Quality from "./Quality.vue";
 
 export default {
   data() {
@@ -73,6 +75,7 @@ export default {
   components: {
     Company,
     Shop,
+    Quality,
   },
 };
 </script>
