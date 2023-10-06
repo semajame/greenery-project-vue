@@ -214,9 +214,13 @@ section {
 
 .shop__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* place-items: center; */
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  place-items: center;
+  gap: 1rem;
+}
+
+.explore__link {
+  text-decoration: none;
 }
 
 .product__container {
@@ -241,12 +245,48 @@ section {
 .product__name {
   font-size: 1.5rem;
   font-weight: 500;
+  color: var(--black);
   letter-spacing: -0.1rem;
 }
 
 .product__price {
   font-size: 1.2rem;
   color: var(--gray);
+}
+
+.product__quantity__cart {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity {
+  padding: 0.5rem;
+  max-width: 80px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  outline: none;
+}
+
+.quantity:focus {
+  border: 1px solid var(--black);
+}
+
+.add__to__cart {
+  background-color: transparent;
+  border: none;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--black);
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--semi-black);
+  font-size: 1.1rem;
+}
+
+.add__to__cart:hover {
+  color: var(--gray);
+  border-bottom: 1px solid var(--gray);
 }
 
 .product__footer__flex {

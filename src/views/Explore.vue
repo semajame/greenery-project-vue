@@ -46,14 +46,21 @@
             </button>
           </div>
           <span class="product__price"> {{ items.price }} </span>
+          <div class="product__quantity__cart">
+            <input type="number" value="1" class="quantity" />
+
+            <button class="add__to__cart">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
+  <Footer />
 </template>
 
 <script>
 import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
 export default {
   data() {
     return {
@@ -180,6 +187,7 @@ export default {
 
   components: {
     NavBar,
+    Footer,
   },
 };
 </script>
