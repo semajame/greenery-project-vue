@@ -11,6 +11,7 @@
       :key="index"
       :class="{ active: button.isActive }"
       @click="activeButton(button)"
+      :data-name="button.buttonName"
     >
       {{ button.category }}
     </button>
@@ -59,21 +60,27 @@ export default {
       buttons: [
         {
           category: "All",
+          buttonName: "All",
         },
         {
           category: "Flowering Plants",
+          buttonName: "Flowering Plants",
         },
         {
           category: "Succulents",
+          buttonName: "Succulents",
         },
         {
           category: "Air Purifiers",
+          buttonName: "Air Purifiers",
         },
         {
           category: "Low-Maintenance",
+          buttonName: "Low-Maintenance",
         },
         {
           category: "Indoor Foliage",
+          buttonName: "Indoor Foliage",
         },
       ],
 
@@ -84,6 +91,7 @@ export default {
           name: "Jesse",
           price: "$ 18.00 USD",
           id: "1",
+          category: "Flowering Plants",
         },
         {
           image:
@@ -98,6 +106,7 @@ export default {
           name: "Venus",
           price: "$ 30.00 USD",
           id: "3",
+          category: "Flowering Plants",
         },
         {
           image:
@@ -105,6 +114,7 @@ export default {
           name: "Lineo",
           price: "$ 18.00 USD",
           id: "4",
+          category: "Flowering Plants",
         },
         {
           image:
@@ -133,6 +143,7 @@ export default {
       });
 
       clickedButton.isActive = !clickedButton.isActive;
+      console.log(clickedButton);
     },
   },
 
