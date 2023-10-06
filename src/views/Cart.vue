@@ -1,5 +1,9 @@
 <template>
   <NavBar />
+
+  <main class="cart__container">
+    <h1>Cart</h1>
+  </main>
 </template>
 
 <script>

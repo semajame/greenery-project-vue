@@ -163,7 +163,8 @@ header,
 
 /* COMPANY */
 
-section {
+section,
+main {
   max-width: 1440px;
   margin: 0 auto;
   padding-left: 6rem;
@@ -438,4 +439,16 @@ hr {
 
 button.active {
   color: var(--green);
+}
+
+/* CART */
+
+.cart__container {
+  padding-block: 5rem;
+}
+
+.cart__container h1 {
+  font-size: 4.3rem;
+  font-weight: 500;
+  color: var(--semi-black);
 }
