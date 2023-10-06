@@ -215,7 +215,7 @@ section {
 .shop__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  place-items: center;
+  /* place-items: center; */
   gap: 2rem;
 }
 
@@ -363,6 +363,8 @@ hr {
 
 .explore__container {
   padding: 6rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .explore__container h1 {

@@ -19,7 +19,13 @@
 
   <section class="explore__plants__container">
     <div class="shop__container">
-      <div class="product__container" v-for="items in plants" :key="items.id">
+      <div
+        class="product__container"
+        :data-category="items.category"
+        v-for="items in plants"
+        :key="items.id"
+        :v-if="items.category === selectedCategory"
+      >
         <div class="product__image">
           <img
             :src="items.image"
@@ -28,11 +34,9 @@
             class="image-cover hover"
           />
         </div>
-
         <div class="product__footer">
           <div class="product__footer__flex">
             <h3 class="product__name">{{ items.name }}</h3>
-
             <button class="product__arrow__button">
               <img
                 src="https://assets.website-files.com/64ed01cfd959df99c0368448/64ef122c8a3b67f03dbd9175_arrow-down-right.svg"
@@ -91,7 +95,7 @@ export default {
           name: "Jesse",
           price: "$ 18.00 USD",
           id: "1",
-          category: "Flowering Plants",
+          category: ["Flowering Plants", "Low Maintenance"],
         },
         {
           image:
@@ -99,6 +103,7 @@ export default {
           name: "Winson",
           price: "$ 24.00 USD",
           id: "2",
+          category: ["Succulents", "Low Maintenance"],
         },
         {
           image:
@@ -106,7 +111,7 @@ export default {
           name: "Venus",
           price: "$ 30.00 USD",
           id: "3",
-          category: "Flowering Plants",
+          category: ["Flowering Plants", "Succulents"],
         },
         {
           image:
@@ -114,7 +119,7 @@ export default {
           name: "Lineo",
           price: "$ 18.00 USD",
           id: "4",
-          category: "Flowering Plants",
+          category: ["Flowering Plants", "Air Purifiers", "Indoor Foliage"],
         },
         {
           image:
@@ -122,6 +127,7 @@ export default {
           name: "Mark",
           price: "$ 30.00 USD",
           id: "5",
+          category: ["Succulents", "Air Purifiers", "Indoor Foliage"],
         },
         {
           image:
@@ -129,8 +135,19 @@ export default {
           name: "Fushion",
           price: "$ 24.00 USD",
           id: "6",
+          category: ["Low Maintenance", "Indoor Foliage"],
+        },
+        {
+          image:
+            "https://assets.website-files.com/64ed01d0d959df99c03684cc/64ef0c921b293c2901ab0265_feey-dAA2Q_eFb84-unsplash.jpg",
+          name: "Lucky",
+          price: "$ 18.00 USD",
+          id: "7",
+          category: ["Air Purifiers"],
         },
       ],
+
+      selectedCategory: "",
     };
   },
 
@@ -143,7 +160,6 @@ export default {
       });
 
       clickedButton.isActive = !clickedButton.isActive;
-      console.log(clickedButton);
     },
   },
 
