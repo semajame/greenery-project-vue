@@ -7,13 +7,13 @@
 
   <section class="explore__button__container">
     <button
-      v-for="(button, index) in buttons"
-      :key="index"
+      v-for="button in buttons"
+      :key="button.category"
       :class="{ active: button.isActive }"
-      @click="activeButton(button)"
+      @click="activeButton(button), filterPlants(button.category)"
       :data-name="button.buttonName"
     >
-      {{ button.category }}
+      {{ button.buttonName }}
     </button>
   </section>
 
@@ -22,9 +22,8 @@
       <div
         class="product__container"
         :data-category="items.category"
-        v-for="items in plants"
+        v-for="items in filteredPlants"
         :key="items.id"
-        :v-if="items.category === selectedCategory"
       >
         <div class="product__image">
           <img
@@ -103,7 +102,7 @@ export default {
           name: "Winson",
           price: "$ 24.00 USD",
           id: "2",
-          category: ["Succulents", "Low Maintenance"],
+          category: ["Succulents", "Low-Maintenance"],
         },
         {
           image:
@@ -135,7 +134,7 @@ export default {
           name: "Fushion",
           price: "$ 24.00 USD",
           id: "6",
-          category: ["Low Maintenance", "Indoor Foliage"],
+          category: ["Low-Maintenance", "Indoor Foliage"],
         },
         {
           image:
@@ -147,7 +146,7 @@ export default {
         },
       ],
 
-      selectedCategory: "",
+      selectedCategory: "All",
     };
   },
 
@@ -160,6 +159,22 @@ export default {
       });
 
       clickedButton.isActive = !clickedButton.isActive;
+    },
+
+    filterPlants(category) {
+      this.selectedCategory = category;
+    },
+  },
+
+  computed: {
+    filteredPlants() {
+      if (this.selectedCategory === "All") {
+        return this.plants;
+      } else {
+        return this.plants.filter((items) =>
+          items.category.includes(this.selectedCategory)
+        );
+      }
     },
   },
 
