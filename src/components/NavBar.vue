@@ -26,9 +26,10 @@
         class="router__link span__color__black"
         >Contacts</router-link
       >
-      <button class="cart__button">
+
+      <router-link :to="{ name: 'cart' }" class="cart__button">
         <img :src="cartIcon" alt="Cart Icon" class="cart__header" />
-      </button>
+      </router-link>
     </div>
   </header>
 </template>

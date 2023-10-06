@@ -23,9 +23,9 @@
         <router-link :to="{ name: 'contacts' }" class="router__link"
           >Contacts</router-link
         >
-        <button class="cart__button">
-          <img :src="cartIcon" alt="Cart Icon" class="cart" />
-        </button>
+        <router-link :to="{ name: 'cart' }" class="cart__button cart">
+          <img :src="cartIcon" alt="Cart Icon" class="cart__header" />
+        </router-link>
       </div>
     </header>
     <div class="main__hero">

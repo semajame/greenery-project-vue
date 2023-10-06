@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Blog from "../views/Blog.vue";
 import Explore from "../views/Explore.vue";
 import Contacts from "../views/Contacts.vue";
+import Cart from "../views/Cart.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/contacts",
     name: "contacts",
     component: Contacts,
+  },
+  {
+    path: "/cart",
+    name: "cart",
+    component: Cart,
   },
 ];
 
