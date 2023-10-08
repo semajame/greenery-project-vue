@@ -25,7 +25,7 @@
       </div>
 
       <div class="input__container">
-        <input type="number" class="quantity" />
+        <input type="number" class="quantity" v-model="product.quantity" />
       </div>
     </div>
 
@@ -50,7 +50,16 @@ export default {
           price: "$24.00 USD",
           imageSrc:
             "https://assets.website-files.com/64ed01d0d959df99c03684cc/64ef1e641d50ae58a7cccc98_feey-dTLeHGu9FAw-unsplash.jpg",
+          quantity: 1, // You can set the initial quantity here
         },
+        {
+          name: "asd",
+          price: "$25.00 USD",
+          imageSrc:
+            "https://assets.website-files.com/64ed01d0d959df99c03684cc/64ef1e641d50ae58a7cccc98_feey-dTLeHGu9FAw-unsplash.jpg",
+          quantity: 1, // You can set the initial quantity here
+        },
+        // Add more products as needed
       ],
     };
   },
