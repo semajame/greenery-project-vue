@@ -47,7 +47,12 @@
           </div>
           <span class="product__price"> {{ items.price }} </span>
           <div class="product__quantity__cart">
-            <input type="number" value="1" class="quantity" />
+            <input
+              type="number"
+              value="1"
+              class="quantity"
+              @input="onlyNumber"
+            />
 
             <button class="add__to__cart">Add to Cart</button>
           </div>
@@ -182,6 +187,20 @@ export default {
           items.category.includes(this.selectedCategory)
         );
       }
+    },
+
+    onlyNumber() {
+      const input = document.querySelectorAll(".quantity");
+
+      input.forEach((quantity) => {
+        quantity.addEventListener("input", () => {
+          const numbersOnly = /^\d+$/;
+
+          if (!numbersOnly.test(quantity.value)) {
+            quantity.value = "";
+          }
+        });
+      });
     },
   },
 
