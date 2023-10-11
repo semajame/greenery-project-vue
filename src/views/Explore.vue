@@ -47,14 +47,11 @@
           </div>
           <span class="product__price"> {{ items.price }} </span>
           <div class="product__quantity__cart">
-            <input
-              type="number"
-              value="1"
-              class="quantity"
-              @input="onlyNumber"
-            />
+            <input type="text" value="1" class="quantity" @input="onlyNumber" />
 
-            <button class="add__to__cart">Add to Cart</button>
+            <button class="add__to__cart" @click="addToCart(items)">
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -175,6 +172,18 @@ export default {
 
     filterPlants(category) {
       this.selectedCategory = category;
+    },
+
+    addToCart(item) {
+      const inputField = event.target
+        .closest(".product__quantity__cart")
+        .querySelector(".quantity");
+      const inputValue = inputField.value;
+      console.log(
+        `Added product ${item.name} to the cart. Quantity: ${inputValue}`
+      );
+
+      // You can perform additional actions here, like adding the item to the cart.
     },
   },
 
