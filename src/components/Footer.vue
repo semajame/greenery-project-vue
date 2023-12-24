@@ -1,9 +1,6 @@
 <template>
   <section class="footer__section">
-    <p>
-      © Greenery. All Rights Reserved 2023. Licensing Webflow Templatesby
-      128.digital. Powered by Webflow
-    </p>
+    <p>{{ footerParagraph }}</p>
 
     <div class="socials__container">
       <a
@@ -21,6 +18,7 @@
 export default {
   data() {
     return {
+      footerParagraph: "© The Greenery. All Rights Reserved 2023.",
       socials: [
         {
           socialMedia: "Facebook",
